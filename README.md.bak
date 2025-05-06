@@ -72,9 +72,9 @@ The Google Drive/Docs Downloader is a Python program designed to download files 
 
 1.  **Clone or Download:** Get the script files and place them in a directory on your system.
 2.  **Install Dependencies:** Open your terminal or command prompt, navigate to the script's directory, and run:
-    ```bash
+    \`\`\`bash
     pip install requests beautifulsoup4
-    ```
+    \`\`\`
     It's recommended to do this within a Python virtual environment.
 
 ---
@@ -82,7 +82,7 @@ The Google Drive/Docs Downloader is a Python program designed to download files 
 
 Ensure all the Python files are in the same directory:
 
-```
+\`\`\`
 your_project_directory/
 ├── main.py               # Main execution script
 ├── config.py             # Configuration settings
@@ -93,7 +93,7 @@ your_project_directory/
 ├── datastructures.py     # Defines data classes (DownloadTask, DownloadResult)
 ├── links.txt             # Default file for URLs (created if not present)
 └── downloaded_files/     # Default folder for downloaded files (created automatically)
-```
+\`\`\`
 
 ---
 ## 6. Usage (Command Line)
@@ -104,15 +104,15 @@ The program is executed via \`main.py\`. You can specify the source of links (sc
 
 To scrape Google Drive/Docs links from a specific webpage:
 
-```bash
+\`\`\`bash
 python main.py --scrape-url "YOUR_WEBPAGE_URL_HERE"
-```
+\`\`\`
 
 **Example:**
 
-```bash
+\`\`\`bash
 python main.py --scrape-url "URL"
-```
+\`\`\`
 
 The script will fetch the content of the provided URL, search for links matching patterns defined in \`config.GDOC_LINK_PATTERNS\`, and then attempt to download them.
 
@@ -120,22 +120,22 @@ The script will fetch the content of the provided URL, search for links matching
 
 To read URLs from a local text file (one URL per line):
 
-```bash
+\`\`\`bash
 python main.py --links-file "/path/to/your/links.txt"
-```
+\`\`\`
 
 **Example:**
 
-```bash
+\`\`\`bash
 python main.py --links-file "my_gdrive_links.txt"
-```
+\`\`\`
 
 If \`my_gdrive_links.txt\` contains:
 
-```
+\`\`\`
 https://docs.google.com/document/d/SOME_DOC_ID/edit
 https://drive.google.com/file/d/SOME_FILE_ID/view
-```
+\`\`\`
 
 The script will process and download these links.
 
@@ -143,9 +143,9 @@ The script will process and download these links.
 
 If no command-line arguments for link sourcing are provided:
 
-```bash
+\`\`\`bash
 python main.py
-```
+\`\`\`
 
 The script will:
 1.  First check if \`SCRAPE_URL\` is set in \`config.py\`. If it is, it will attempt to scrape that URL.
@@ -156,9 +156,9 @@ The script will:
 
 To see the available command-line options and a brief description:
 
-```bash
+\`\`\`bash
 python main.py --help
-```
+\`\`\`
 
 ---
 ## 7. Configuration (\`config.py\`)
@@ -177,12 +177,12 @@ The \`config.py\` file allows you to customize various aspects of the program wi
     *   Set this to a specific URL (e.g., \`"https://example.com/shared_files"\`) to enable scraping mode by default when no CLI arguments are given.
     *   If \`None\`, the script will use \`LINKS_FILE\` by default (unless overridden by CLI).
 *   \`GDOC_LINK_PATTERNS\`: A list of regular expression patterns used by the \`LinkExtractor\` to identify potential Google Drive/Docs links on a webpage.
-    ```python
+    \`\`\`python
     GDOC_LINK_PATTERNS = [
         r"drive\.google\.com/(?:file/d/|open\?id=|uc\?id=)([a-zA-Z0-9_-]+)",
         r"docs\.google\.com/(?:document|spreadsheets|presentation)/d/([a-zA-Z0-9_-]+)"
     ]
-    ```
+    \`\`\`
 
 ### Google Drive Export Settings
 

@@ -1,0 +1,6 @@
+# Add Google Drive URLs below, one per line.
+# This file is used if no command-line source is specified AND SCRAPE_URL in config.py is not set.
+# Example file:
+# https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view?usp=sharing
+# Example Google Doc (will prompt for export format):
+# https://docs.google.com/document/d/YOUR_DOC_ID_HERE/edit?usp=sharing
