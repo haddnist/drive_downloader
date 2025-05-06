@@ -19,3 +19,6 @@ downloaded_files/
 .idea/
 *.swp
 *.swo
+
+*.DS_Store
+README.md.bak
