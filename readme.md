@@ -111,7 +111,7 @@ python main.py --scrape-url "YOUR_WEBPAGE_URL_HERE"
 **Example:**
 
 \`\`\`bash
-python main.py --scrape-url "https://sites.google.com/view/cjin/teaching/ece524"
+python main.py --scrape-url "URL"
 \`\`\`
 
 The script will fetch the content of the provided URL, search for links matching patterns defined in \`config.GDOC_LINK_PATTERNS\`, and then attempt to download them.
