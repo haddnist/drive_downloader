@@ -1,4 +1,4 @@
-# Google Drive/Docs Downloader - HELP
+# Google Drive/Docs Downloader
 
 ## Table of Contents
 
