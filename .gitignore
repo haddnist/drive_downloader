@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Downloaded files from our script
+downloaded_files/
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo

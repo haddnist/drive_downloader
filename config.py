@@ -41,3 +41,15 @@ CHUNK_SIZE = 8192
 
 # --- User Agent ---
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+# --- Download Behavior ---
+DOWNLOAD_TO_PART_FILES = True # Download to .part files and rename on completion
+CHECK_EXISTING_SIZE_BEFORE_DOWNLOAD = True # Perform HEAD request to check size
+
+# --- Retry Settings (using tenacity) ---
+RETRY_ATTEMPTS = 3  # Number of times to retry a download on specific errors
+RETRY_WAIT_SECONDS = 5  # Initial wait time in seconds before retrying
+RETRY_MULTIPLIER = 2    # Multiplier for wait time (e.g., 5s, 10s, 20s)
+RETRY_MAX_WAIT_SECONDS = 60 # Maximum wait time between retries
+
+# ... (rest of the config)
